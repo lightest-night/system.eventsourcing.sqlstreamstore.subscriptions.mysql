@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AssemblyName>LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql</AssemblyName>
+        <RootNamespace>LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql</RootNamespace>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <PackageId>LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql</PackageId>
+        <Authors>James Woodley</Authors>
+        <Company>LightestNight Ltd</Company>
+        <Title>LightestNight :: System :: Event Sourcing :: Sql Stream Store :: Subscriptions :: MySql</Title>
+        <Description>The core elements to enable Event Sourcing subscriptions using the Sql Stream Store framework and the MySql data store. Allows automatic subscriptions to be created assisting in the building of eventually consistent read models.</Description>
+        <PackageTags>lightestnight;system;infrastructure;event;event sourcing;domain driven design;cqrs;sql stream store;subscriptions;mysql</PackageTags>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <InformationalVersion>1.0.0</InformationalVersion>
+        <PackageIcon>icon.jpeg</PackageIcon>
+        <RepositoryUrl>https://github.com/lightestnight/system.eventsourcing.sqlstreamstore.subscriptions.mysql</RepositoryUrl>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LightestNight.System.EventSourcing.SqlStreamStore.MySql" Version="1.5.0-alpha0001" />
+      <PackageReference Include="LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions" Version="1.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\icon.jpeg">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+</Project>

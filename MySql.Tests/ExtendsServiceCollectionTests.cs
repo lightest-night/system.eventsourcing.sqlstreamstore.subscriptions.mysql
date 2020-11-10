@@ -14,7 +14,7 @@ namespace LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql.
 
         public ExtendsServiceCollectionTests()
         {
-            _services = new ServiceCollection();    
+            _services = new ServiceCollection();  
         }
         
         [Fact]

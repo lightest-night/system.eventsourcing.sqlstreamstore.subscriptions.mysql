@@ -26,7 +26,7 @@ namespace LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql
                 services.AddSingleton(serviceProvider =>
                 {
                     var serviceFactory = serviceProvider.GetRequiredService<ServiceFactory>();
-                    return observerTypeFactory == null ? serviceFactory(observerType) : observerTypeFactory(serviceProvider, observerType);
+                    return observerTypeFactory == null ? serviceFactory(observerType) as IEventObserver : observerTypeFactory(serviceProvider, observerType);
                 });
             
             return services.AddHostedService<EventSubscription>();

@@ -35,8 +35,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="LightestNight.System.EventSourcing.SqlStreamStore.MySql" Version="1.5.0-alpha0025" />
-      <PackageReference Include="LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions" Version="1.5.0-alpha0001" />
+      <PackageReference Include="LightestNight.System.EventSourcing.SqlStreamStore.MySql" Version="1.5.0-alpha0026" />
+      <PackageReference Include="LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions" Version="1.5.0" />
     </ItemGroup>
 
     <ItemGroup>

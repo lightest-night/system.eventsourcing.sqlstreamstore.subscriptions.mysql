@@ -57,7 +57,7 @@ namespace LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql.
             var testObserver = new TestObserver();
             
             // Act
-            _services.AddEventStoreSubscriptions(() => new MySqlOptions(), null, testObserver);
+            _services.AddEventStoreSubscriptions(() => new MySqlOptions(), new IEventObserver[] {testObserver});
             
             // Assert
             _services.BuildServiceProvider().GetService<IEventObserver>().ShouldBe(testObserver);

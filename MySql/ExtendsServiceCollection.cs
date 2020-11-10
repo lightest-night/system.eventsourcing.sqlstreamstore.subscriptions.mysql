@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using LightestNight.System.Data.MySql;
@@ -31,8 +32,8 @@ namespace LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql
         }
 
         public static IServiceCollection AddEventStoreSubscriptions(this IServiceCollection services,
-            MySqlOptionsFactory mySqlOptionsFactory, Action<EventSourcingOptions>? eventSourcingOptions = null,
-            params IEventObserver[] observerInstances)
+            MySqlOptionsFactory mySqlOptionsFactory, IEnumerable<IEventObserver> observerInstances,
+            Action<EventSourcingOptions>? eventSourcingOptions = null)
         {
             services.AddMySqlEventStore(mySqlOptionsFactory, eventSourcingOptions);
 

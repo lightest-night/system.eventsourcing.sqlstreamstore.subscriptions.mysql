@@ -49,18 +49,5 @@ namespace LightestNight.System.EventSourcing.SqlStreamStore.Subscriptions.MySql.
             result.ShouldBeOfType<TestObserver>();
             factoryUsed.ShouldBeTrue();
         }
-
-        [Fact]
-        public void Should_Add_Test_Observers_By_Instance()
-        {
-            // Arrange
-            var testObserver = new TestObserver();
-            
-            // Act
-            _services.AddEventStoreSubscriptions(() => new MySqlOptions(), new IEventObserver[] {testObserver});
-            
-            // Assert
-            _services.BuildServiceProvider().GetService<IEventObserver>().ShouldBe(testObserver);
-        }
     }
 }
